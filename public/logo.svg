@@ -1,0 +1,16 @@
+<svg viewBox="0 0 400 400">
+
+<path
+d="
+M90 90
+L310 90
+L180 200
+L310 310
+L90 310
+"
+fill="none"
+stroke="black"
+stroke-width="48"
+stroke-linejoin="round"/>
+
+</svg>
