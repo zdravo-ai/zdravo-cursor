@@ -1,0 +1,38 @@
+{
+  "name": "zdravo-mcp",
+  "version": "2.2.3",
+  "description": "Persistent memory for Cursor AI — connects to Zdravo's personal AI memory service",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "zdravo-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "npx tsc src/index.ts --outDir dist --module ES2022 --target ES2022 --moduleResolution node --declaration --skipLibCheck"
+  },
+  "keywords": [
+    "cursor",
+    "cursor-extension",
+    "mcp",
+    "model-context-protocol",
+    "ai-memory",
+    "zdravo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shqiprim/zdravo-mcp.git"
+  },
+  "homepage": "https://zdravo.ai",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@zdravoai/mcp": "^2.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
