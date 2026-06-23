@@ -1,17 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-  "name": "zdravo",
-  "description": "Persistent memory for Cursor AI — connects to Zdravo's personal AI memory service",
+  "name": "zdravo-cursor",
+  "description": "Cursor plugin wrapper that proxies to the @zdravoai/mcp server.",
   "version": "2.2.3",
   "repository": {
-    "url": "https://github.com/zdravo-ai/zdravo-cursor",
+    "url": "https://github.com/zdravoai/zdravo-mcp.git",
     "source": "github"
   },
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
-      "identifier": "@zdravoai/mcp",
+      "identifier": "zdravo-mcp",
       "version": "2.2.3",
       "transport": {
         "type": "stdio"
