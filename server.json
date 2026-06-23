@@ -4,7 +4,7 @@
   "description": "Persistent memory for Cursor AI — connects to Zdravo's personal AI memory service",
   "version": "2.2.3",
   "repository": {
-    "url": "https://github.com/shqiprim/zdravo-cursor-plugin",
+    "url": "https://github.com/zdravo-ai/zdravo-cursor",
     "source": "github"
   },
   "packages": [
