@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
   "name": "io.github.zdravoai/zdravo-cursor",
   "description": "Persistent memory for Cursor AI via Zdravo. Thin wrapper that installs and runs the official @zdravoai/mcp package with scoped API key validation.",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "repository": {
     "url": "https://github.com/zdravo-ai/zdravo-cursor",
     "source": "github"
@@ -12,7 +12,7 @@
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "@zdravoai/mcp",
-      "version": "2.2.4",
+      "version": "2.2.5",
       "transport": {
         "type": "stdio"
       },
