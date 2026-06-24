@@ -1,0 +1,14 @@
+{
+  "name": "zdravo",
+  "version": "2.2.5",
+  "description": "Persistent memory for Cursor AI via Zdravo. Search and save memories across your AI sessions.",
+  "author": {
+    "name": "Zdravo AI",
+    "url": "https://github.com/zdravo-ai"
+  },
+  "homepage": "https://zdravo.ai",
+  "repository": "https://github.com/zdravo-ai/zdravo-cursor",
+  "license": "MIT",
+  "keywords": ["cursor", "mcp", "ai-memory", "zdravo"],
+  "mcpServers": "./.mcp.json"
+}

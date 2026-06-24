@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "zdravo": {
+      "command": "npx",
+      "args": ["-y", "@zdravoai/mcp"],
+      "env": {
+        "ZDRAVO_API_KEY": "${ZDRAVO_API_KEY}"
+      }
+    }
+  }
+}

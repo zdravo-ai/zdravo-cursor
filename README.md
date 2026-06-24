@@ -15,7 +15,7 @@ Connects Cursor to [Zdravo AI](https://zdravo.ai) — your personal long-term me
   "mcpServers": {
     "zdravo": {
       "command": "npx",
-      "args": ["-y", "zdravo-mcp"],
+      "args": ["-y", "@zdravoai/mcp"],
       "env": {
         "ZDRAVO_API_KEY": "your-api-key"
       }
