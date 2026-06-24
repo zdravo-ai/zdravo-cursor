@@ -1,0 +1,21 @@
+name: zdravo
+displayName: Zdravo AI Memory
+description: "Persistent organizational memory for AI agents. Save, search, and retrieve context across all your AI conversations and development sessions."
+homepage: https://zdravo.ai
+repository: https://github.com/zdravoai/zdravo-mcp
+tags:
+  - memory
+  - knowledge-graph
+  - semantic-search
+  - organizational-memory
+  - persistent-context
+license: MIT
+install:
+  npx:
+    package: "@zdravoai/mcp"
+    args: ["--api-key", "${ZDRAVO_API_KEY}"]
+config:
+  ZDRAVO_API_KEY:
+    type: string
+    description: "Your Zdravo API key. Get one at https://zdravo.ai/dashboard/api-keys"
+    required: true

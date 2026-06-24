@@ -42,7 +42,6 @@ const toolRequirements: Record<string, string[]> = {
   get_constitution: ['mcp:org'],
   auto_capture: ['mcp:org'],
   save_session_summary: ['mcp:org'],
-  zdravo_check_policy: ['mcp:org'],
   zdravo_hardware_status: ['mcp:personal'],
   zdravo_swarm_publish: ['mcp:org'],
   zdravo_scaffold: ['mcp:org'],
@@ -117,7 +116,6 @@ function formatBrandedOutput(name: string, data: unknown): string {
     get_constitution: '📜',
     auto_capture: '📹',
     save_session_summary: '📝',
-    zdravo_check_policy: '🛡️',
     zdravo_hardware_status: '🖥️',
     zdravo_swarm_publish: '🐝',
     zdravo_scaffold: '🏗️',
@@ -531,29 +529,6 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
       },
     },
     {
-      name: 'zdravo_check_policy',
-      description: 'Check organizational policies and constitution rules. Returns ALLOW, DENY, or REDACT with reason.',
-      inputSchema: {
-        type: 'object',
-        properties: {
-          action: {
-            type: 'string',
-            description: 'The command or action you are about to execute',
-          },
-          content: {
-            type: 'string',
-            description: 'The full content/command to validate against policies',
-          },
-          context: {
-            type: 'object',
-            description: 'Additional context (file path, project, etc.)',
-            additionalProperties: true,
-          },
-        },
-        required: ['action'],
-      },
-    },
-    {
       name: 'zdravo_hardware_status',
       description: 'Get real-time hardware metrics for compute arbitrage routing. Shows GPU utilization, temperature, memory, and suggests optimal inference backend.',
       inputSchema: {
@@ -672,22 +647,6 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       case 'save_session_summary':
         result = await api('/api/v1/memories', 'POST', { ...args, sourcePlatform: 'mcp-session', memoryType: 'procedural' }, ['mcp:org'])
         break
-       case 'zdravo_check_policy': {
-          const constitutionPrefix = await autoInjectContext({
-            filePath: '',
-            fileContent: args?.content as string | undefined,
-            language: undefined,
-          });
-          const memories = constitutionPrefix.memories;
-          result = {
-            decision: memories.length > 0 ? 'ALLOW' : 'DENY',
-            reason: memories.length > 0
-              ? `Found ${memories.length} relevant policy memories. Apply with discretion.`
-              : 'No matching policy memories found. Proceed with standard caution.',
-            memories: memories.slice(0, 3),
-          };
-          break;
-        }
       case 'zdravo_hardware_status':
         result = await getHardwareStatus()
         break

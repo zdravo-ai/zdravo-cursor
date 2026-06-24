@@ -4,7 +4,7 @@
   "description": "Persistent memory for Cursor AI via Zdravo. Thin wrapper that installs and runs the official @zdravoai/mcp package with scoped API key validation.",
   "version": "2.2.5",
   "repository": {
-    "url": "https://github.com/zdravo-ai/zdravo-cursor",
+    "url": "https://github.com/zdravoai/zdravo-mcp",
     "source": "github"
   },
   "packages": [
@@ -12,7 +12,7 @@
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "@zdravoai/mcp",
-      "version": "2.2.5",
+"version": "2.3.0",
       "transport": {
         "type": "stdio"
       },
